@@ -7,17 +7,16 @@
 ## Basler
     1.Example:
         from connections.basler import Basler
-        <!-- init camera -->
+        # init camera
         camera = Basler()
-        <!-- open camera by index 0 -->
+        # open camera by index 0
         camera.open(0)
-        <!-- open camera by serinumber
-        camera.open('serinumber_here')
-         -->
-         <!-- grab image -->
+        # open camera by serinumber
+        #camera.open('serinumber_here')
+        # grab image
         mat = camera.grab()
         print(mat.shape)
-        <!-- close camera -->
+        # close camera
         camera.close()
 ## Webcam
 # Socket utils
