@@ -2,7 +2,7 @@
     1.Clone responsitory
     2.Extract folder
     3.cd folder
-    4.pip install - e .
+    4.pip install -e .
 # Camera
 ## Basler
 Using open Basler camera
