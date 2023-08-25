@@ -1,0 +1,16 @@
+LICENSE
+README.md
+pyproject.toml
+src/connections/__init__.py
+src/connections/basler.py
+src/connections/logger.py
+src/connections/socket_utils.py
+src/connections/webcam.py
+src/connections.egg-info/PKG-INFO
+src/connections.egg-info/SOURCES.txt
+src/connections.egg-info/dependency_links.txt
+src/connections.egg-info/requires.txt
+src/connections.egg-info/top_level.txt
+tests/test_basler.py
+tests/test_socket.py
+tests/test_webcam.py
