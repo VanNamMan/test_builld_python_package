@@ -1,9 +1,9 @@
 # Installation
-1.Clone responsitory [Github page](https://github.com/VanNamMan/test_builld_python_package)\
-
-2.Extract folder\
-3.cd folder\
-4.pip install -e .\
+Responsitory [Github page](https://github.com/VanNamMan/test_builld_python_package)
+    1.Clone Responsitory
+    2.Extract folder\
+    3.cd folder\
+    4.pip install -e .\
 # Camera
 ## Basler
 Using open Basler camera
