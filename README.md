@@ -5,8 +5,8 @@
     4.pip install - e .
 # Camera
 ## Basler
-    -Reference [pypylon master](https://github.com/basler/pypylon).
-    
+Reference [pypylon master](https://github.com/basler/pypylon).
+
     -Example:
         from connections.basler import Basler
         # init camera
