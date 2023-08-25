@@ -23,24 +23,26 @@ class CustomFormatter(logging.Formatter):
         return formatter.format(record)
 
 class Logger(logging.Logger):
-    def __init__(self, name="", log_path=None, 
-                 maxBytes=None, backupCount=None, 
-                 file_level=None, 
+    def __init__(self, name="", file_name=None, 
+                 maxBytes=10000, backupCount=10, 
+                 file_level=logging.DEBUG, 
                  stream_level=logging.DEBUG) -> None:
         '''
         name: name of logger
-        log_path: path of log file
+        file_name: path of log file, if file_name is None logger don't add file_handler
         log_signal: ptqySignal(str), using emit log
+        file_level: level of file_handler
+        stream_level: level of stream_handler(DEBUG -> CRITICAL)
         '''
         super(Logger, self).__init__(name)
         # if no logger to console
         self.propagate = False
         # self.disabled = True
         
-        if file_level:
+        if file_name is not None:
             fmt = '%(asctime)s - [%(name)s] - [%(levelname)s] - [in %(pathname)s:%(lineno)d] : %(message)s'
             formatter = Formatter(fmt)
-            file_handler = RotatingFileHandler(log_path, maxBytes=maxBytes, backupCount=backupCount)
+            file_handler = RotatingFileHandler(file_name, maxBytes=maxBytes, backupCount=backupCount)
             file_handler.setLevel(file_level)
             file_handler.setFormatter(formatter)
             self.addHandler(file_handler)
@@ -52,7 +54,10 @@ class Logger(logging.Logger):
         self.addHandler(stream_handler)
 
 if __name__ == "__main__":
-    logger = Logger("mylog", "logfile.log", stream_level=logging.INFO)
+    logger = Logger(name="mylog", 
+                    file_name="logfile.log", 
+                    file_level=logging.INFO,
+                    stream_level=logging.INFO)
     logger.info("this is info")
     logger.warning("this is warning")
     logger.error("this is error")

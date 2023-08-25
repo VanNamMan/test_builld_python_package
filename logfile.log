@@ -1,0 +1,4 @@
+2023-08-25 16:46:35,066 - [mylog] - [INFO] - [in E:\Github\test_builld_python_package\src\connections\logger.py:61] : this is info
+2023-08-25 16:46:35,067 - [mylog] - [WARNING] - [in E:\Github\test_builld_python_package\src\connections\logger.py:62] : this is warning
+2023-08-25 16:46:35,067 - [mylog] - [ERROR] - [in E:\Github\test_builld_python_package\src\connections\logger.py:63] : this is error
+2023-08-25 16:46:35,068 - [mylog] - [CRITICAL] - [in E:\Github\test_builld_python_package\src\connections\logger.py:64] : this is critical
