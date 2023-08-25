@@ -24,7 +24,6 @@ Reference [pypylon master](https://github.com/basler/pypylon).
 ## Webcam
 Using open Webcam or RTSP camera.
 Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html).
-
     - Example:
         from connections.webcam import Webcam
         # init camera
@@ -62,7 +61,7 @@ Some function help send image(numpy array) or text over socket client and server
 # Logger
 Custom logger.\
 Reference [Logger console with color](https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output).\
-Reference [Logging CookBook](https://docs.python.org/3/howto/logging-cookbook.html).\
+Reference [Logging CookBook](https://docs.python.org/3/howto/logging-cookbook.html).
     - Example
         from connections.logger import Logger
         logger = Logger(name="mylog", 
