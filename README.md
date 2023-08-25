@@ -5,6 +5,7 @@
     4.pip install - e .
 # Camera
 ## Basler
+Reference [pypylon master](https://github.com/basler/pypylon/)
     1.Example:
         from connections.basler import Basler
         # init camera
@@ -18,8 +19,6 @@
         print(mat.shape)
         # close camera
         camera.close()
-
-    2.Reference [pypylon master](https://github.com/basler/pypylon/)
 ## Webcam
 # Socket utils
 # Logger
