@@ -19,8 +19,7 @@
         # close camera
         camera.close()
 
-    2.Reference
-        [pypylon-master](https://github.com/basler/pypylon/).
+    2.Reference [pypylon master](https://github.com/basler/pypylon/)
 ## Webcam
 # Socket utils
 # Logger
