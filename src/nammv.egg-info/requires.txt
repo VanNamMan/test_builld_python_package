@@ -1,4 +1,4 @@
-pypylon==2.2.0
+pypylon
 opencv-python
 numpy
 termcolor
