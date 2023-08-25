@@ -1,4 +1,5 @@
 # Installation
+
     1.Clone responsitory
     2.Extract folder
     3.cd folder
@@ -23,7 +24,8 @@ Reference [pypylon master](https://github.com/basler/pypylon).
         camera.close()
 ## Webcam
 Using open Webcam or RTSP camera.\
-Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html).\
+Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html).
+
     - Example:
         from connections.webcam import Webcam
         # init camera
@@ -41,7 +43,8 @@ Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_
         # close camera
         camera.close()
 # Socket utils
-Some function help send image(numpy array) or text over socket client and server.\
+Some function help send image(numpy array) or text over socket client and server.
+
     - Example:
         import socket
         import numpy as np
@@ -62,7 +65,9 @@ Some function help send image(numpy array) or text over socket client and server
 Custom logger.\
 Reference [Logger console with color](https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output).\
 Reference [Logging CookBook](https://docs.python.org/3/howto/logging-cookbook.html).
+
     - Example
+
         from connections.logger import Logger
         logger = Logger(name="mylog", 
                     file_name="logfile.log", 
