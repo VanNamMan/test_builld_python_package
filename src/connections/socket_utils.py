@@ -4,22 +4,34 @@ import numpy as np
 TXT_STARTBYTES = b':text:'
 IM_STARTBYTES = b':image:'
 
-def mat2buffer(array:np.ndarray):
+def encode_array(array):
+    f = BytesIO()
+    np.savez(f, frame=array)
+    f.seek(0)
+    return f.read()
+
+def mat2buffer(array:np.ndarray, startbytes=b''):
     f = BytesIO()
     np.savez(f, frame=array)
     packet_size = len(f.getvalue())
-    header = f'{packet_size}{IM_STARTBYTES.decode()}'
+    if startbytes:
+        header = f'{packet_size}{startbytes.decode()}'
+    else:
+        header = f''
     out = bytearray()
     out += header.encode()
     f.seek(0)
     out += f.read()
     return out
 
-def text2buffer(text:str):
+def text2buffer(text:str, startbytes=b''):
     out = bytearray()
     text = text.encode()
     packet_size = len(text)
-    header = f'{packet_size}{TXT_STARTBYTES.decode()}'
+    if startbytes:
+        header = f'{packet_size}{startbytes.decode()}'
+    else:
+        header = f''
     out += header.encode()
     out += text
     return out
@@ -37,3 +49,11 @@ def send_image(socket, mat:np.ndarray):
 def send_text(socket, text:str):
     buffer = text2buffer(text)
     socket.sendall(buffer)
+
+if __name__ == "__main__":
+    mat = np.random.randint(0, 256, (320, 240, 3), np.uint8)
+    buffer = encode_array(mat)
+    print(type(buffer), len(buffer))
+
+    mat = buffer2mat(buffer=buffer)
+    print(mat.shape)
