@@ -3,40 +3,27 @@ import numpy as np
 import logging
 logging.basicConfig(format='%(message)s',
                     level=logging.DEBUG)
-# dev
-# release
-# logger = Logger("BaslerLog", stream_level=logging.INFO)
 
 class Webcam():
     def __init__(self) -> None:
         self._camera:cv2.VideoCapture = None
         self._is_open = False
 
-    def open(self, camera_index=None) -> bool:
+    def open(self, source) -> bool:
         '''
         @params
-        @camera_index: int or str
+        @source: int or str
             - int: index of camera
+            - str: rtsp stream link of camera
         return bool
         '''
         error = ""
         self._is_open = False
-        webcam_devices = [1]
-        if not len(webcam_devices):
-            error = "Do not found Webcam device"
+        try:
+            self._camera = cv2.VideoCapture(source, cv2.CAP_DSHOW)
+        except Exception as ex:
+            error = str(ex)
             logging.error(error)
-        else:
-            if isinstance(camera_index, str):
-                if camera_index.isdigit():
-                    camera_index = int(camera_index)
-                else:
-                    error = "camera_index invalid"
-                    logging.error(error)
-            try:
-                self._camera = cv2.VideoCapture(camera_index, cv2.CAP_DSHOW)
-            except Exception as ex:
-                error = str(ex)
-                logging.error(error)
     
         if not error:
             logging.info("Camera open sucess")
