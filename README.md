@@ -58,8 +58,8 @@ Some function help send image(numpy array) or text over socket client and server
     mat = np.random.radnint(0, 256, (640, 480, 3))
     send_image(sk, mat)
 # Logger
-Custom logger.\
-Reference [Logger console with color](https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output).\
+Custom logger\
+Reference [Logger console with color](https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output)\
 Reference [Logging CookBook](https://docs.python.org/3/howto/logging-cookbook.html)
 
     from connections.logger import Logger
