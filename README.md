@@ -1,9 +1,10 @@
 # Installation
 Responsitory [Github page](https://github.com/VanNamMan/test_builld_python_package)
+
+    - Install from local responsitory:
     1.Clone Responsitory
-    2.Extract folder\
-    3.cd folder\
-    4.pip install -e .\
+    2.cd folder\
+    3.pip install -e .\
 # Camera
 ## Basler
 Using open Basler camera
