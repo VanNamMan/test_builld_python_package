@@ -12,12 +12,15 @@
         # open camera by index 0
         camera.open(0)
         # open camera by serinumber
-        #camera.open('serinumber_here')
+        # camera.open('serinumber_here')
         # grab image
         mat = camera.grab()
         print(mat.shape)
         # close camera
         camera.close()
+
+    2.Reference
+        1.[pypylon-master](https://github.com/basler/pypylon)
 ## Webcam
 # Socket utils
 # Logger
