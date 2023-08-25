@@ -22,8 +22,8 @@ Reference [pypylon master](https://github.com/basler/pypylon).
         # close camera
         camera.close()
 ## Webcam
-Using open Webcam or RTSP camera.
-Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html).
+Using open Webcam or RTSP camera.\
+Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html).\
     - Example:
         from connections.webcam import Webcam
         # init camera
@@ -41,7 +41,7 @@ Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_
         # close camera
         camera.close()
 # Socket utils
-Some function help send image(numpy array) or text over socket client and server.
+Some function help send image(numpy array) or text over socket client and server.\
     - Example:
         import socket
         import numpy as np
