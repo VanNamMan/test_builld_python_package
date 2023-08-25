@@ -8,7 +8,7 @@
 Using open Basler camera
 Reference [pypylon master](https://github.com/basler/pypylon)
 
-    from connections.basler import Basler
+    from connections import Basler
     # init camera
     camera = Basler()
     # open camera by index 0
@@ -24,7 +24,7 @@ Reference [pypylon master](https://github.com/basler/pypylon)
 Using open Webcam or RTSP camera\
 Reference [opencv video capture](https://docs.opencv.org/4.x/dd/d43/tutorial_py_video_display.html)
 
-    from connections.webcam import Webcam
+    from connections import Webcam
     # init camera
     camera = Webcam()
 
@@ -62,7 +62,7 @@ Custom logger\
 Reference [Logger console with color](https://stackoverflow.com/questions/384076/how-can-i-color-python-logging-output)\
 Reference [Logging CookBook](https://docs.python.org/3/howto/logging-cookbook.html)
 
-    from connections.logger import Logger
+    from connections import Logger
     logger = Logger(name="mylog", 
                 file_name="logfile.log", 
                 file_level=logging.INFO,
