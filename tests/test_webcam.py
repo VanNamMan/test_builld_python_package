@@ -1,7 +1,7 @@
 import sys
 sys.path.append("src/connections")
 
-from webcam import Webcam
+from camera import Webcam
 
 if __name__ == "__main__":
     camera = Webcam()

@@ -1,11 +1,16 @@
 import sys
 sys.path.append("src/connections")
 
-from basler import Basler
+from camera import Basler
 
-if __name__ == "__main__":
+
+def test_find_devices():
+    devs = Basler.get_devices()
+    assert len(devs) == 1
+    assert '40044700' in devs
+
+def test_open_cam():
     camera = Basler()
-    print(camera.get_devices())
     camera.open(0)
     if camera.is_open():
         camera.start_grabbing()

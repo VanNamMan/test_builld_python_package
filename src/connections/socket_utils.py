@@ -49,11 +49,3 @@ def send_image(socket, mat:np.ndarray):
 def send_text(socket, text:str):
     buffer = text2buffer(text)
     socket.sendall(buffer)
-
-if __name__ == "__main__":
-    mat = np.random.randint(0, 256, (320, 240, 3), np.uint8)
-    buffer = encode_array(mat)
-    print(type(buffer), len(buffer))
-
-    mat = buffer2mat(buffer=buffer)
-    print(mat.shape)
