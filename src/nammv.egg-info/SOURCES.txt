@@ -5,6 +5,7 @@ src/connections/__init__.py
 src/connections/camera.py
 src/connections/logger.py
 src/connections/socket_utils.py
+src/connections/yolo_utils.py
 src/nammv.egg-info/PKG-INFO
 src/nammv.egg-info/SOURCES.txt
 src/nammv.egg-info/dependency_links.txt
